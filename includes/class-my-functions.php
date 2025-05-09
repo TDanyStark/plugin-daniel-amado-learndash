@@ -101,12 +101,14 @@ class My_functions
     }
   }
 
+  // Comprobar el campo de contraseña
   public function check_password_field()
   {
     if (! is_user_logged_in() && ! $_POST['account_password'])
       wc_add_notice(__('Por favor, ingresa una contraseña para crear tu cuenta.'), 'error');
   }
 
+  // Guardar la contraseña del campo de checkout
   public function save_password_checkout_field($customer_id)
   {
     if (! empty($_POST['account_password'])) {
