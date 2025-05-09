@@ -1,0 +1,169 @@
+.learndash-all-courses, .learndash-enrolled-courses{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: var(--size-l);
+  align-items: stretch;
+}
+
+
+.learndash-all-courses .course-item, .learndash-enrolled-courses .course-item {
+  max-width: 100%;
+  border-radius: var(--size-xs);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  border: 1px solid transparent;
+}
+.learndash-all-courses .course-item:hover, .learndash-enrolled-courses .course-item:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--bricks-color-cxkzia);
+}
+
+.course-item-link{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.learndash-all-courses .course-image img, .learndash-enrolled-courses .course-image img  {
+  max-width: 100%;
+  height: auto;
+  border-top-left-radius: var(--size-xs);
+  border-top-right-radius: var(--size-xs);
+}
+
+.learndash-all-courses .info-container, .learndash-enrolled-courses .course-title {
+  padding: var(--size-m);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.learndash-all-courses .footer-link{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: var(--size-m);
+}
+
+.view-link span{
+  display: block;
+  padding: 8px 15px;
+  border: 1px solid var(--bricks-color-cxkzia);
+  color: var(--bricks-color-cxkzia);
+  border-radius: var(--size-m);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+
+.alert-daniel {
+  background-color: #f44336;
+  color: white;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.daniel-custom-course-button{
+	text-align: center;
+}
+
+.daniel-custom-course-button a{
+	display:inline-block;
+	width: 100%;
+	text-align: center;
+	font-weight: 600;
+  background-color: var(--bricks-color-fpxrdo);
+	color: var(--bricks-color-4edc58);
+	padding: 8px 20px;
+	border-radius: 25px;
+}
+
+.daniel-custom-course-price .price_text_shortcode {
+  font-size: var(--size-xl);
+  text-wrap: nowrap;
+  font-weight: 700;
+  color: var(--bricks-color-cxkzia);
+  text-align: center;
+}
+
+.daniel-custom-course-button-login{
+	margin-top: 15px;
+}
+
+.daniel-custom-course-button-login p{
+	margin-bottom: 10px;
+}
+
+.daniel-custom-course-button-login .btn-secondary{
+  border: 1px solid var(--bricks-color-fpxrdo);
+  background-color: transparent;
+  color: var(--bricks-color-fpxrdo);
+}
+
+
+/* common */
+.ribbon {
+  width: 130px;
+  height: 130px;
+  overflow: hidden;
+  position: absolute;
+
+
+}
+.ribbon::before,
+.ribbon::after {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  display: block;
+  border: 5px solid var(--bricks-color-cxkzia);
+  /* background-color: var(--bricks-color-cxkzia); */
+
+
+}
+.ribbon span {
+  position: absolute;
+  display: block;
+  width: 225px;
+  padding: 5px 0;
+  background-color: var(--bricks-color-oegbmg);
+  color: var(--bricks-color-cxkzia);
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  text-align: center;
+  border-top: 1px solid var(--bricks-color-cxkzia);
+  border-bottom: 1px solid var(--bricks-color-cxkzia);
+  font-weight: 600;
+}
+
+/* top left*/
+.ribbon-top-left {
+  top: -10px;
+  left: -10px;
+}
+.ribbon-top-left::before,
+.ribbon-top-left::after {
+  border-top-color: transparent;
+  border-left-color: transparent;
+}
+.ribbon-top-left::before {
+  top: 0;
+  right: 0;
+}
+.ribbon-top-left::after {
+  bottom: 0;
+  left: 0;
+}
+.ribbon-top-left span {
+  right: -35px;
+  top: 35px;
+  transform: rotate(-45deg);
+}
+
+.footer__price{
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--bricks-color-cxkzia);
+}
