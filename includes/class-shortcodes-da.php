@@ -336,7 +336,12 @@ class My_Plugin_Shortcodes
                 // Si todas las lecciones están completadas, redirige a la primera lección
                 if ($isProximo) {
                     $button_text = $texts[$current_language]['go_to_courses'];
-                    $button_url = home_url('/cursos');
+                    $button_url = home_url('/cursos/');
+                    
+                    // si es en ingles que redirija a /en/all-courses-en/
+                    if ($current_language == 'en') {
+                        $button_url = home_url('/en/all-courses-en/');
+                    }
                 } else {
                     $button_text = $texts[$current_language]['back_to_start'];
                     $first_lesson_id = reset($course_steps);
